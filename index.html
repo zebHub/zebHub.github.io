@@ -19,6 +19,9 @@ function onload(){
 	calendarSRC = calendarSRC + "&ctz=" + tzid;
 	document.body.innerHTML += "\n" + tzid	
 	document.getElementById('calendar').src = calendarSRC;
+	document.getElementById('calendar').contentWindow.location.reload();
+	
+	
 	if (theOS.name == "Mac OS") {
 		document.body.innerHTML += " Hey there Buddhist buddy You're on a Mac 🍎 in " + tzid + "\n"
 		document.body.innerHTML += "<a href=\"https://calendar.google.com/calendar/embed?src=buddhism.online.group%40gmail.com\" > Click here to login with Google Account and subscribe to the Calendar</a>"
