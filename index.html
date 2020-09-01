@@ -5,6 +5,8 @@
 	<style>
 		body{
 			white-space:pre-wrap;
+			font-family:sans-serif;
+			background-color:lightgray;
 		}
 	</style>
 	
@@ -24,7 +26,7 @@ function onload(){
 		document.getElementById('calendar').contentWindow.location.reload();		
 	} catch(err){
 		console.log(err)
-		console.log("could not refresh url")
+		console.log("could not refresh url using reload function")
 	}
 
 	// if (theOS.name == "Mac OS") {
