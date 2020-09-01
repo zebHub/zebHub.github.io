@@ -24,6 +24,7 @@ function onload(){
 		document.getElementById('calendar').contentWindow.location.reload();		
 	} catch(err){
 		console.log(err)
+		console.log("could not refresh url")
 	}
 
 	// if (theOS.name == "Mac OS") {
@@ -35,6 +36,7 @@ function onload(){
 	// } else if (theOS.name == "iOS") {
 	// 	document.body.innerHTML += " Hey there Buddhist buddy. You're on an iOS 📱 device in " + tzid
 	// }
+	
 	document.body.innerHTML += "<a href='" + webCalURL + "'>Subscribe with Apple Calendar</a> \n"
 	document.body.innerHTML += "<a href='" + calendarSRC + "'>Subscribe with Google Calendar</a> \n"
 }
