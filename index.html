@@ -20,7 +20,12 @@ function onload(){
 	var webCalURL = "webcal://calendar.google.com/calendar/ical/buddhism.online.group%40gmail.com/private-4958f27bd0db06973b33fcb6a28ea88f/basic.ics"
 	calendarSRC = calendarSRC + "&ctz=" + tzid;
 	document.getElementById('calendar').src = calendarSRC;
-	//document.getElementById('calendar').contentWindow.location.reload();
+	try{
+		document.getElementById('calendar').contentWindow.location.reload();		
+	} catch(err){
+		console.log(err)
+	}
+
 	// if (theOS.name == "Mac OS") {
 	// 	document.body.innerHTML += " Hey there Buddhist buddy. You're on a Mac 🍎 in " + tzid + "\n"
 	// } else if (theOS.name == "Android") {
