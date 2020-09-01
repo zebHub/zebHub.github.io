@@ -7,16 +7,16 @@
 function onload(){
     var parser = new UAParser();
 	var theOS = parser.getOS()
+	const tzid = Intl.DateTimeFormat().resolvedOptions().timeZone;
 	
 	if (theOS.name == "Mac OS") {
-		const tzid = Intl.DateTimeFormat().resolvedOptions().timeZone;
-		document.body.innerHTML = tzid + "MAC OS"
-		
+		document.body.innerHTML = " Hey there Buddhist buddy You're on a Mac 🍎 in " + tzid
 	} else if (theOS.name == "Android") {
+		document.body.innerHTML = " Hey there Buddhist buddy You're on an Android 🤖 in " + tzid
 	} else if (theOS.name == "Windows"){
-		document.body.innerHTML = " "
+		document.body.innerHTML = " Hey there Buddhist buddy You're on a Windows in " + tzid
 	} else if (theOS.name == "iOS"){
-		document.body.innerHTML = ""
+		document.body.innerHTML = " Hey there Buddhist buddy You're on an iOS device in " + tzid
 	}
 }
 </script>
