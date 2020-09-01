@@ -1,6 +1,12 @@
 <!doctype html>
 <html>
 <head>
+	<style>
+		body{
+			white-space:pre-wrap;
+		}
+	</style>
+	
 <script src="ua-parser.js"></script>
 <script>
 	
@@ -9,10 +15,15 @@ function onload(){
 	var theOS = parser.getOS()
 	const tzid = Intl.DateTimeFormat().resolvedOptions().timeZone;
 	
+	
+	
 	if (theOS.name == "Mac OS") {
-		document.body.innerHTML = " Hey there Buddhist buddy You're on a Mac 🍎 in " + tzid
+		document.body.innerHTML += " Hey there Buddhist buddy You're on a Mac 🍎 in " + tzid + "\n"
+		document.body.innerHTML += "<a href=\"https://calendar.google.com/calendar/embed?src=buddhism.online.group%40gmail.com\" > Click here to login with Google Account and subscribe to the Calendar</a>"
 	} else if (theOS.name == "Android") {
-		document.body.innerHTML = " Hey there Buddhist buddy You're on an Android 🤖 in " + tzid
+		document.body.innerHTML += " Hey there Buddhist buddy You're on an Android 🤖 in " + tzid
+		document.body.innerHTML += "<a herf= 'https://calendar.google.com/calendar/embed?src=buddhism.online.group%40gmail.com' Click here to subscribe to the calendar> "
+		
 	} else if (theOS.name == "Windows"){
 		document.body.innerHTML = " Hey there Buddhist buddy You're on a Windows in " + tzid
 	} else if (theOS.name == "iOS"){
@@ -21,6 +32,8 @@ function onload(){
 }
 </script>
 </head>
-<body onload="onload()">
+<body onload="onload()" >
+<iframe src="https://calendar.google.com/calendar/embed?src=buddhism.online.group%40gmail.com&ctz=Asia%2FAmman" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
 </body>
 </html>
